@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+
+	body span {
+		color: blue;
+	}
+
+</style>
+</head>
+<body>
+
+	<h1>Reservas (Reservas ativas)</h1>
+
+
+	<div th:each="reservas : ${reserva}">
+		<div><h3>Dados de teste</h3></div>
+		<div>Solicitante <span th:text="${reservas.solicitante}"></span></div>
+		<div>Setor <span th:text="${reservas.setor}"></span></div>
+		<div>Data da Reserva <span th:text="${reservas.dataDaReserva}"></span></div>
+		<div>Hora inicial <span th:text="${reservas.horaInicial}"></span></div>
+		<div>Hora final <span th:text="${reservas.horaFinal}"></span></div>
+		<div>Equipamento <span th:text="${reservas.equipamento}"></span></div>
+	</div>
+
+
+</body>
+</html>
