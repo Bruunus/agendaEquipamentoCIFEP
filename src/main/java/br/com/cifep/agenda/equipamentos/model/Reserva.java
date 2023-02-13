@@ -127,8 +127,9 @@ public class Reserva {
  
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
+		
 		return "" + this.setor;
+		
 	}
 
 	public LocalDate getDataDaDevolucao() {

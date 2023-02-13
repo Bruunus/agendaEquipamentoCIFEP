@@ -1,29 +1,29 @@
 package br.com.cifep.agenda.equipamentos;
 
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
-import br.com.cifep.agenda.equipamentos.model.Reserva;
-import br.com.cifep.agenda.equipamentos.model.Setor;
-import br.com.cifep.agenda.equipamentos.repository.ReservaRepository;
-import br.com.cifep.agenda.equipamentos.repository.SetorRepository;
+import br.com.cifep.agenda.calendario.CalendarioAgenda;
+
+//import br.com.cifep.agenda.equipamentos.repository.ReservaRepository;
+//import br.com.cifep.agenda.equipamentos.repository.SetorRepository;
+
+// (exclude = {DataSourceAutoConfiguration.class })
 
 @SpringBootApplication
 public class AgendaEquipamentosApplication implements CommandLineRunner{
 
 	
-	@Autowired
-	ReservaRepository reservaRepository;
-	
-	@Autowired
-	SetorRepository setorRepository;
+//	@Autowired
+//	ReservaRepository reservaRepository;
+//	
+//	@Autowired
+//	SetorRepository setorRepository;
 	
 	
 	
@@ -32,6 +32,16 @@ public class AgendaEquipamentosApplication implements CommandLineRunner{
 		
 		SpringApplication.run(AgendaEquipamentosApplication.class, args);
 		System.out.println("Springboot carregado com sucesso !!!");
+		
+//		CalendarioAgenda calendário = new CalendarioAgenda();
+//		
+//		List<String> lista = calendário.getMeses();	
+//		
+//		lista.forEach(a -> {
+//			System.out.println(a);
+//		});
+		
+		
 		
 	}
 
@@ -43,30 +53,26 @@ public class AgendaEquipamentosApplication implements CommandLineRunner{
 	
 
 	@Override
-	public void run(String... args) throws Exception {
+	public void run(String... args) throws Exception { 
 		
-//		Setor setor = new Setor("TECNOLOGIA DA INFORMAÇÃO");
-//			setorRepository.save(setor);
-//		
-//		 List<Setor> setorList = new ArrayList();
-//		 setorList.add(setor);
-//		 
-//		 setorRepository.save(setor);
-//		
+	 
+		 
+		 
+		
 //		Reserva reserva = new Reserva();
-//			reserva.setSolicitante("Bruno");
+//			reserva.setSolicitante("Amanda");
 //			reserva.setDataDaReserva(LocalDate.of(2022, 12, 12));
 //			reserva.setHoraInicial(LocalTime.of(10, 00));
 //			reserva.setHoraFinal(LocalTime.of(15, 00));
-////			reserva.setSetor(setorList);
+//			reserva.setSetor(new Setor("MOVIMENTAÇÃO"));
 //			reserva.setEquipamento("DATASHOW");
 //			
 //			reservaRepository.save(reserva);
-//		
-//			
-//			
-//		selects("Bruno");
-//			
+		
+			
+			
+		 
+			
 			
 		
 	}

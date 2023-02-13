@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<head th:replace="~{templates/head :: head}"></head>
+<!-- add css proprietário -->
+<link th:href="@{/css/agenda/historico.css}" rel="stylesheet" />
 <body>
 
-Histórico
+<span th:text="${mensagem}"></span>
 
 </body>
 </html>

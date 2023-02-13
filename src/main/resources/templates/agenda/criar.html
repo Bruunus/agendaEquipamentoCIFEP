@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{templates/head :: head}"></head>
+<!-- add css proprietário -->
+<link th:href="@{/css/agenda/criar.css}" rel="stylesheet" />
 <body>
 
-Reservas
+<span th:text="${mensagem}"></span>
 
 </body>
 </html>
